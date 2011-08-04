@@ -1,1 +1,21 @@
-Nothing here.
+Installation
+
+Server side:
+ 1). Edit and Import SQL script sql\create_tables.sql (one column for each miner)
+ 2). Upload script to the host
+ 3). Copy include\config.default to include\config.php
+
+ hash.so and json.so php modules are needed
+
+To install execute:
+ pecl install json
+ pecl install hash
+
+and add lines into php.ini file
+  extension=hash.so                                                                                                                                                                                              
+  extension=json.so  
+
+Client side:
+1). bat_scripts\collector.bat must be executed once a minute
+
+ wget ( http://www.gnu.org/s/wget/ ) and clocktweak ( https://bitcointalk.org/index.php?topic=9982.200 ) tools are needed 
