@@ -1,0 +1,263 @@
+.amount {
+    color: #000000;
+    font-size: 95%;
+}
+
+.diff_amount {
+    color: #000000;
+    font-size: 70%;
+}
+
+.orders_header
+{
+    font-size: 80%;
+}
+
+.put_order
+{
+    margin-top:10px;
+    font-size: 70%;
+}
+
+
+.mtgox_amount {
+    color: #000000;
+    font-size: 75%;
+}
+
+#grow_difficulty {
+    
+    font-size: 105%;
+}
+.view {
+    font-size: 80.1%;
+    color: #DD4814;
+}
+#workers_table td,#workers_table th
+{
+  font-size: 75%;  
+  padding-top:5px;
+  
+}
+body {
+    font: 13px/1.231 arial,helvetica,clean,sans-serif;
+    color: #333333;
+    font-family: "Ubuntu Beta",UbuntuBeta,Ubuntu,"Bitstream Vera Sans","DejaVu Sans",Tahoma,sans-serif;
+    background: none repeat scroll 0 0 #E6E3E1;
+}
+a, a:link {
+    color: #DD4814;
+    text-decoration: none;
+}
+
+
+
+.box
+{
+    float: left;
+    margin-right:10px;
+    width: 100px;
+    height:90px;
+}
+
+.box h1, #workers_table.header_row, .box_header {
+    border-bottom: 1px dotted #CCCCCC;
+    font-size: 85%;
+    margin: 0 -20px 10px;
+    padding: 10px 20px;
+}
+
+.box_header span
+{
+font-size: 85%; 
+}
+
+.steps section, .box {
+    background: none repeat scroll 0 0 #F7F6F5;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    padding: 0 20px 20px;
+}
+
+
+#workers_table tr.header_row {
+    
+    border-bottom: 1px dotted #CCCCCC;
+}
+
+
+#workers_data
+{
+    border:1px solid gray;
+    background: none repeat scroll 0 0 #F7F6F5;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding: 0 20px 20px;
+    margin-left:30px;
+    margin-top:20px;
+    width:550px;
+    border-collapse: collapse;
+    border-width: 0px;
+    float:left;
+}
+
+#mtgox_data
+{
+    border:1px solid gray;
+    background: none repeat scroll 0 0 #F7F6F5;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding: 0 20px 20px;
+    margin-left:30px;
+    margin-top:20px;
+    width:370px;
+    border-collapse: collapse;
+    border-width: 0px;
+    float:left;
+}
+#workers_status
+{
+    float:left;
+}
+
+#workers_table
+{
+    border-collapse: collapse;
+    border-width: 0px;
+    margin-top:15px;
+    border:1px solid gray;
+}
+
+#orders_table
+{
+    border-collapse: collapse;
+    border-width: 0px;
+    margin-top:15px;
+    border:1px solid gray;
+}
+
+#depth_table
+{
+    border-collapse: collapse;
+    border-width: 0px;
+    margin-top:15px;
+    border:1px solid gray;
+    
+}
+
+#depth_table td
+{
+    padding:3px;
+}
+
+#orders_table td,#orders_table th, #depth_table td,#depth_table th
+{
+    font-size:70%;
+    padding:2px;
+}
+
+
+
+#workers_table 
+{
+    border:1px solid gray;
+    background: none repeat scroll 0 0 #F7F6F5;
+    border-radius: 5px 5px 5px 5px;
+    overflow: hidden;
+    padding: 0 20px 20px;
+    width:520px;
+    border-collapse: collapse;
+    border-width: 0px;
+    
+}   
+
+h4
+
+{
+    margin:0px;
+    padding:0px;
+}
+
+
+.clear { /* generic container (i.e. div) for floating buttons */
+    overflow: hidden;
+    width: 100%;
+}
+ 
+a.button {
+    background: transparent url('../img/bg_button_a.gif') no-repeat scroll top right;
+    color: #444;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 24px;
+    margin-right: 6px;
+    padding-right: 18px; /* sliding doors padding */
+    text-decoration: none;
+}
+ 
+a.button span {
+    background: transparent url('../img/bg_button_span.gif') no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 5px 0 5px 18px;
+}
+ 
+a.button:active {
+    background-position: bottom right;
+    color: #000;
+    outline: none; /* hide dotted outline in Firefox */
+}
+ 
+a.button:active span {
+    background-position: bottom left;
+    padding: 6px 0 4px 18px; /* push text down 1px */
+}
+
+input.edit_text {
+    
+border : 1px solid Black;
+background-color : #CCCCCC;
+color : #0E1930;
+font-size : 80%;
+font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-weight : bold;
+height: 15px; /* replace 2em with your chosen value, in px or whatever */
+}
+
+.GrayButton {
+    height:15px;
+    font-size:80%;
+    width: 6em;
+    background-color: Gray;
+    border:1px solid black;
+    font-weight:bold;
+    color:white;
+}
+.GrayButton:hover {
+    background-color: #9ed216;
+    color: #fff;
+    font-weight: bold;
+        cursor: pointer;
+}
+.edit_box
+{
+    float:left;
+    margin-right:5px;
+    margin-top:5px;
+}
+#mtgox_sell_sum, #mtgox_buy_sum
+{
+    width:60px;
+
+}
+
+.td_price
+{
+cursor: hand;
+}
+
+IMG{vertical-align:middle}
