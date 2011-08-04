@@ -46,7 +46,6 @@ include_once ("../modules/mtgox_func.php");
                                     foreach ($mtgox_trade_data as $key => $value)
                                      {
                                          
-                                         //$utcdiff = date('Z',  time()); //Поправка на часовой пояс
                                          $trade['date'] = date( 'd-m-Y H:i:s',$value['date']+$utcdiff);
                                          $trade['price'] = round($value['price'],3);
                                          $trade['amount'] = round($value['amount'],3);
@@ -55,8 +54,6 @@ include_once ("../modules/mtgox_func.php");
                                          if ($trade['amount'] > 1) {$mtgox_trade_data_out[$value['tid']] = $trade;}
                                      }
                                      rsort($mtgox_trade_data_out);
-                                         //echo count($mtgox_trade_data);
-                                         //$smarty->assign('mtgox_data',json_decode($mtgox_data, true));
                                          $smarty->assign('trade_data',$mtgox_trade_data_out);
                                          $smarty->display('mtgox_trade.tpl');
                                          exit;
@@ -67,9 +64,6 @@ include_once ("../modules/mtgox_func.php");
                                  $mtgox_depth_data = GetDepth();
                                  if (!isset($mtgox_depth_data)) {echo "Get depth data error!";exit;}
                                  $mtgox_data = GetMtGoxData();
-                                 //file_put_contents('c:\114324234231',serialize($mtgox_depth_data));
-                                 //exit;
-                                 //$mtgox_depth_data = json_decode($mtgox_depth_data_json,true);
                                  rsort ($mtgox_depth_data['bids']);
                                  foreach ($mtgox_depth_data['bids'] as $key => $value)
                                      {

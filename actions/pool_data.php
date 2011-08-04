@@ -91,15 +91,15 @@ include_once ("../modules/pool_func.php");
                 
                 $WorkersCount++; 
                 $temp_old_value = $miner_items_old[$key];
-                $temp_change_10_min = $temp_value-$temp_old_value;//Изменение температуры
+                $temp_change_10_min = $temp_value-$temp_old_value;
                 
                 $load_value = $load_items[$key];//загрузка
                 $load_old_value = $load_items[$key];
-                $load_change_10_min = $load_value-$load_old_value;//изменение загрузки
+                $load_change_10_min = $load_value-$load_old_value;
                 
                 $core_value = $core_items[$key];//загрузка
                 $core_old_value = $core_items[$key];
-                $core_change_10_min = $core_value-$core_old_value;//изменение загрузки
+                $core_change_10_min = $core_value-$core_old_value;
                 
                 $key = substr($key,5);
                
