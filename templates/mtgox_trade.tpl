@@ -1,13 +1,13 @@
 <link rel="stylesheet" type="text/css" href="css/dash.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<div class="box_header">Последние сделки<span style="float:right;"><a href="javascript:ReloadMtGoxTrades()">reload</a><br/></span></div>
+<div class="box_header">Last lrade<span style="float:right;"><a href="javascript:ReloadMtGoxTrades()">reload</a><br/></span></div>
 <table cellpadding="0" cellspacing="0" border="1" id="orders_table">
     <tr class="header_row" ">
        <th width="30px" >ask/bid</th>   
-       <th width="170px" >Дата</th>   
-       <th width="60px" >Цена</th>   
-       <th width="60px" >Кол-во</th>
-       <th width="60px" >Сумма</th>   
+       <th width="170px" >Date</th>   
+       <th width="60px" >Price</th>   
+       <th width="60px" >Amount</th>
+       <th width="60px" >Sum</th>   
      </tr>
      
      {foreach from=$trade_data item=trade_item key=trade_item_key}

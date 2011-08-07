@@ -65,18 +65,27 @@ include_once ("../modules/mtgox_func.php");
                                  if (!isset($mtgox_depth_data)) {echo "Get depth data error!";exit;}
                                  $mtgox_data = GetMtGoxData();
                                  rsort ($mtgox_depth_data['bids']);
+                                 
+                                 $amount_ask = 0;
+                                 $sum_ask = 0;
                                  foreach ($mtgox_depth_data['bids'] as $key => $value)
                                      {
                                          $bid['amount'] = round($mtgox_depth_data['bids'][$key][1],3);
                                          $bid['price'] = round($mtgox_depth_data['bids'][$key][0],3);
                                          $bid['color'] = GetDepthColor($bid['amount']);
+                                         $amount_bid += $bid['amount'];
+                                         $sum_bid += $bid['amount']*$bid['price'];
                                          if ($bid['amount'] > 1) {$mtgox_depth_data_out['bids'][] = $bid;}
                                      }
+                                     $amount_ask = 0;
+                                     $sum_ask = 0;
                                      foreach ($mtgox_depth_data['asks'] as $key => $value)
                                      {
                                          $ask['amount'] = round($mtgox_depth_data['asks'][$key][1],3);
                                          $ask['price'] = round($mtgox_depth_data['asks'][$key][0],3);
                                          $ask['color'] = GetDepthColor($ask['amount']);
+                                         $amount_ask += $ask['amount'];
+                                         $sum_ask += $ask['amount']*$ask['price'];
                                          if ($ask['amount'] > 1) {$mtgox_depth_data_out['asks'][] = $ask;}
                                          
                                      }
@@ -86,6 +95,13 @@ include_once ("../modules/mtgox_func.php");
                                  array_splice($mtgox_depth_data_out['asks'],45);
                                  $smarty->assign('mtgox_data',json_decode($mtgox_data, true));
                                  $smarty->assign('mtgox_depth',$mtgox_depth_data_out);
+                                 
+                                 $smarty->assign('amount_bid',$amount_bid);
+                                 $smarty->assign('sum_bid',$sum_bid);
+                                 
+                                 $smarty->assign('amount_ask',$amount_ask);
+                                 $smarty->assign('sum_ask',$sum_ask);
+                                 
                                  $smarty->display('mtgox_depth.tpl');
                                  Exit;
                                }  break;  

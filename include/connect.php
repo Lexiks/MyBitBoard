@@ -1,7 +1,4 @@
 <?php
-
-
-  
 include_once "db/mysql.php";
 $db=DbSimple_Generic::connect("mysql://$DB_User:$DB_Password@$DB_Host/$DB_Databse");
 $db->setErrorHandler('databaseErrorHandler');

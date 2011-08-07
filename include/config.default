@@ -1,7 +1,7 @@
 <?php
     $DB_Host = '';
-    $DB_Databse = 'bit_temp';
-    $DB_User = 'root';
+    $DB_Databse = '';
+    $DB_User = '';
     $DB_Password = '';
     $DB_Base_CodePage = 'cp1251'; 
     $DB_Base_Collation = 'cp1251_general_ci';
@@ -12,5 +12,17 @@
     $dip_api =  '';
     $cz_api = '';
 
-    $script_dir = str_replace('\include','',dirname(__FILE__));
+    $script_dir = str_replace('include','',dirname(__FILE__)).'/';
+
+// ***************************************************  EXAMPLE *******************************************************************************
+//This variables must match fields in create_tables.sql
+//redefine it according your rigs configuration
+    $miners_table = array('MinerA' => array ('0' => 'MinerA1','3' => 'MinerA2','6' => 'MinerA3','9' => 'MinerA4'), //First miner rig with 4 GPU
+                          'MinerB' => array ('0' => 'MinerB1','3' => 'MinerB2','3' => 'MinerB3'),                   //Second miner rig with 3 GPU
+                          'MinerC' => array ('0' => 'MinerC1','3' => 'MinerC2'),                                     //Third miner rig with 2 GPU
+                          'MinerD' => array ('0' => 'MinerD1'),                                                      //Fourth miner rig with 1 GPU
+                          //etc
+                         );  
+// ***********************************************************************************************************************************************
+
 ?>

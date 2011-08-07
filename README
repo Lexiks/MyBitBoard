@@ -1,9 +1,9 @@
 Installation
 
 Server side:
- 1). Edit and Import SQL script sql\create_tables.sql (one column for each miner)
+ 1). Edit and Import SQL script sql\create_tables.sql (one column for each miner GPU)
  2). Upload script to the host
- 3). Copy include\config.default to include\config.php
+ 3). Copy and edit include\config.default to include\config.php
 
  hash.so and json.so php modules are needed
 

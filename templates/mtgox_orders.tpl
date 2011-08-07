@@ -1,15 +1,15 @@
 <link rel="stylesheet" type="text/css" href="css/dash.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<div class="box_header">Мои заявки<span style="float:right;"><a href="javascript:ReloadMtGoxOrders()">reload</a><br/></span></div>
+<div class="box_header">My orders:<span style="float:right;"><a href="javascript:ReloadMtGoxOrders()">reload</a><br/></span></div>
 <span class="orders_header"><b><img height="16px" src="img/bitcoin24.png"> BTC: </b>{$orders.btcs}</span>
 <span class="orders_header"><b><img height="16px" src="img/usd16.png"> USD: </b>{$orders.usds}</span>
 <table cellpadding="0" cellspacing="0" border="1" id="orders_table">
     <tr class="header_row" ">
-       <th width="70px" >Тип</th>
-       <th width="170px" >Дата</th>   
-       <th width="60px" >Кол-во</th>
-       <th width="60px" >Цена</th>   
-       <th width="60px" >Сумма</th>   
+       <th width="70px" >Type</th>
+       <th width="170px" >Date</th>   
+       <th width="60px" >Amount</th>
+       <th width="60px" >Price</th>   
+       <th width="60px" >Sum</th>   
        <th width="13px" ></th>   
      </tr>
      
@@ -31,7 +31,7 @@
                <span class="edit_box">Кол-во: <input class="edit_text"   type="text" id="mtgox_sell_amount" size="11" maxlength="11"/  onkeyup="javascript:ReCalcSellSum()"></span>
                <span class="edit_box">Цена: <input class="edit_text"  type="text" id="mtgox_sell_price" size="11" maxlength="11" onchange="javascript:ReCalcSellSum()" value="{$mtgox_data.ticker.buy}" onkeyup="javascript:ReCalcSellSum()"/></span>
                <span class="edit_box" id="mtgox_sell_sum">0</span>
-               <span class="edit_box"><img height="10px" src="img/up.png"><input type="submit" value="Продать" class="GrayButton" onClick="MtgoxSellOrder($('#mtgox_sell_amount').val(),$('#mtgox_sell_price').val())"></span>
+               <span class="edit_box"><img height="10px" src="img/up.png"><input type="submit" value="Sell" class="GrayButton" onClick="MtgoxSellOrder($('#mtgox_sell_amount').val(),$('#mtgox_sell_price').val())"></span>
                
             </div>   
             
@@ -39,6 +39,6 @@
                <span class="edit_box">Кол-во: <input class="edit_text"   type="text" id="mtgox_buy_amount" size="11" maxlength="11"/ onkeyup="javascript:ReCalcBuySum()"></span>
                <span class="edit_box">Цена: <input class="edit_text"  type="text" id="mtgox_buy_price" size="11" maxlength="11" onchange="javascript:ReCalcBuySum()" value="{$mtgox_data.ticker.sell}" onkeyup="javascript:ReCalcBuySum()"/></span>
                <span class="edit_box" id="mtgox_buy_sum">0</span>
-               <span class="edit_box"><img height="10px" src="img/down.png"><input type="submit" value="Купить" class="GrayButton" onClick="MtgoxBuyOrder($('#mtgox_buy_amount').val(),$('#mtgox_buy_price').val())"></span>
+               <span class="edit_box"><img height="10px" src="img/down.png"><input type="submit" value="Buy" class="GrayButton" onClick="MtgoxBuyOrder($('#mtgox_buy_amount').val(),$('#mtgox_buy_price').val())"></span>
             </div>   
 

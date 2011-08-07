@@ -1,4 +1,4 @@
-<div class="box_header">Воркеры<span style="float:right;"><a href="javascript:ReloadWorkers()">reload</a><br/></span></div>
+<div class="box_header">Workers<span style="float:right;"><a href="javascript:ReloadWorkers()">reload</a><br/></span></div>
 <table cellpadding="0" cellspacing="0" border="0" id="workers_table">
 <tr class="header_row">
    <th width="60px" >Miner</th>
