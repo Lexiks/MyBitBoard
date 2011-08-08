@@ -5,7 +5,9 @@ Server side:
  2). Upload script to the host
  3). Copy and edit include/config.default to include/config.php
  4). If you whant to use data preview (data_preview.html) edit js\ext_modules\datagrid.js file and replace line  
-     Miners : ['MinerA1','MinerA2', 'MinerA3','MinerA4','MinerB1','MinerB2','MinerB3','MinerC1','MinerC2','MinerD1']  with your FieldNames
+     Miners : ['MinerA1','MinerA2', 'MinerA3','MinerA4','MinerB1','MinerB2','MinerB3','MinerC1','MinerC2','MinerD1']  with your 
+FieldNames
+ 5). chmod 777 to folders cache и templates_c  
 
  hash.so and json.so php modules are needed
 
@@ -21,3 +23,5 @@ Client side:
 1). bat_scripts\collector.bat must be executed once a minute
 
  wget ( http://www.gnu.org/s/wget/ ) and clocktweak ( https://bitcointalk.org/index.php?topic=9982.200 ) tools are needed 
+
+Подробная , пошаговая инструкция по установки скрипта на русском языке http://goo.gl/4X9cA
